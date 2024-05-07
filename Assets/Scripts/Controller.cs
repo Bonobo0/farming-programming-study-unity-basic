@@ -111,6 +111,12 @@ public class Controller : MonoBehaviour
 
 
     }
+
+    public void Jump()
+    {
+        rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);
+    }
+
     // OnTrigger[] 함수는 Collider가 다른 Collider에 닿았을 때 호출됨
     // OnCollision[] 함수는 실제 물리적 충돌이 일어났을 때 호출됨
     private void OnTriggerStay(Collider other)
